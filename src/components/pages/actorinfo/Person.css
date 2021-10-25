@@ -1,0 +1,62 @@
+.person-info-container {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 0 10px 3px rgb(158, 158, 4);
+    padding: 10px;
+    
+
+}
+.person-box {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+.person-info>ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+}
+.person-info>ul>li {
+   padding-left: 2px;
+   padding-right: 2px;
+    color:yellow;   
+    font-size: 12px;
+}
+.person-image {
+   width: 250px;
+    height: 300px;
+}
+.person-image>img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 15px;
+} 
+.person-bio {
+    margin-left: 20px;
+    width:70%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.person-bio>p {
+    font-size: 20px;
+    line-height: 2rem;
+    color: rgb(150, 143, 143);
+ 
+}
+
+.person-bio>h4 {
+    font-weight: 400;
+    color:cyan;
+    box-shadow: 0 2px 10px 0 orange;
+    padding: 10px;
+}

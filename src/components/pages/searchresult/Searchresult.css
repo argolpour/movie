@@ -1,0 +1,85 @@
+.movies-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .movies-box {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .movie-card {
+    width: 23%;
+    margin: 1%;
+    box-shadow: 0 0 10px 2px white;
+    position: relative;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .movie-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px 2px cyan;
+  }
+  .movie-card> img {
+    margin-top: 15px;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+  }
+  .movie-card > .rank {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .movie-card > .rank > p {
+    width: 50px;
+    color: #333;
+    background-color: orange;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .movie-card > .rank > p:first-child {
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .movie-card > .rank > p:nth-child(2) {
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  .title {
+    text-align: center;
+    font-weight: bold;
+    color: aliceblue;
+    margin-top: 10px;
+  }
+  .country-year {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+  .country-year > p {
+    color: white;
+  }
+  .movie-card a::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }

@@ -1,0 +1,191 @@
+.link-light {
+    text-decoration: none;
+    color:rgb(172, 165, 165);
+    transition: all 0.3s;
+}
+.link-light:hover {
+    text-decoration: none;;
+    color:yellow;
+}
+.titr {
+    color:rgba(255, 255, 255, 0.815);
+    font-weight: bold;
+}
+.line {
+    color:aliceblue
+}
+.top {
+    margin-top: 30px;
+    width: 100%;
+    height: 200px;
+    
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 5px 2px white;
+ 
+}
+.movie-poster {
+    margin-left: 2px;
+    width: 230px;
+    height: 200px;
+    
+
+}
+.movie-poster>img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 5px;
+
+}
+.movie-title {
+    text-align: center;
+    margin-right: 2px;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.scores {
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.imdb-rate {
+    padding: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+.imdb-rate>i {
+    margin-right: 3px;
+    font-size: 30px;
+    color:orange;
+}
+/* trailer-plot */
+.trailer-plot {
+   
+    width: 100%;
+    max-height: 800px;
+    display: flex;
+    justify-content: flex-start;
+}
+.trailer-plot>.plot {
+    box-shadow: 0 0 5px 2px gray;
+    width: 700px;
+    max-height: 400px;
+    margin-top: 20px;
+    padding: 15px;
+    overflow: auto;
+}
+.trailer-plot>.plot>p:first-child {
+    text-align: center;
+    width: 250px;
+    padding: 7px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px cyan;
+}
+.trailer-plot>.plot>p:nth-child(2) {
+    text-align: justify;
+    color: rgba(255, 255, 255, 0.685);
+    
+    
+    
+}
+
+
+/* box office */
+.box-office {
+    width: 700px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 5px 2px gray;
+    padding: 15px;
+}
+.box-office>h5 {
+    
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 7px;
+    box-shadow: 0 0 5px 2px cyan;
+    margin-bottom: 20px;
+}
+.box-office>p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-office>hr {
+    border:1px solid white;
+}
+/* cast */
+.cast {
+    padding: 10px;
+    margin-top: 50px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   background-color: rgba(255, 255, 255, 0.397);
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+.cast>.cast-header {
+    margin-top: 3px;
+    text-align: center;
+    box-shadow: 0 0 3px 3px yellow;
+    background-color:yellow ;
+}
+.actor-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.actor-box {
+    width: 45%;
+    height: 100px;
+    margin: 2%;
+   
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.actor-image>img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+   
+}
+.actor-info {
+    text-align: center;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.actor-info>p:nth-child(2) {
+    max-width: 300px;
+    font-weight: bold;
+    color:rgba(51, 51, 51, 0.637)
+}
+.actor-info>a {
+    text-decoration: none;
+    color:#333;
+    transition: all 0.3s;
+}
+.actor-info>a:hover {
+    color: black;
+}
+

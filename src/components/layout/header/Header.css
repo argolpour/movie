@@ -1,0 +1,65 @@
+.header {
+    width: 100%;
+
+}
+.topHeader {
+    width: 100%;
+    height: 60px;
+  
+    display: flex;
+    justify-content: space-between;
+
+}
+.topHeader>.serach-box {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.topHeader>.serach-box>input {
+    border:1px solid rgb(156, 153, 153);
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: rgb(185, 180, 180);
+    padding-left: 5px;
+
+}
+.topHeader>.serach-box>a {
+    font-size: 25px;
+    color: rgb(148, 145, 145);
+    position: absolute;
+    top:17px;
+    right:10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.topHeader>.serach-box>a:hover {
+    text-decoration: none;
+    color:yellow;
+}
+.topHeader>.serach-box>i:hover {
+    color:white;
+}
+.login-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+.login-box>button {
+    background-color: transparent;
+    border: 1px solid rgb(156, 153, 153);
+    color: white;
+    border-radius: 10px;
+
+}
+.nav-link {
+    color:rgba(255, 255, 255, 0.637)!important;
+    transition: all 0./3s!important;
+}
+.nav-link:hover {
+    color:white!important;
+}

@@ -1,0 +1,7 @@
+person Info
+ https://imdb-api.com/en/API/Name/k_uoedhqkl/nm0000154
+
+ a movie page
+ https://www.imdb.com/title/tt1832382/?ref_=fn_al_tt_1
+
+

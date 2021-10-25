@@ -1,25 +1,17 @@
 import './Movie.css'
-import { useEffect ,useState} from 'react';
+import { useEffect,useContext} from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+import movieContext from './../../../context/movieContext/movieContext';
+
 const Movieinfo = () => {
 
 const {id}=useParams();
-const [movie, setMovie] = useState([])
-const [trailer, setTrailer] = useState([])
-const fetchMovieData=async ()=>{
-   await fetch(`https://imdb-api.com/en/API/Title/k_13evw331/${id}`)
-    .then(response => response.json())
-    .then(json => setMovie(json))
-}
-const fetchMovieTrailer=()=>{
-    fetch(`https://imdb-api.com/en/API/Trailer/k_13evw331/${id}`)
-    .then(response => response.json())
-    .then(json => setTrailer(json))
-}
+const {fetchMovieData,movie,fetchMovieTrailer,trailer}=useContext(movieContext);
 useEffect(()=>{
-    fetchMovieData();
-    fetchMovieTrailer();
+    fetchMovieData(id);
+    fetchMovieTrailer(id);
+    // eslint-disable-next-line
 },[id])
 console.log(movie?.boxOffice?.budget);
     return (

@@ -1,0 +1,6 @@
+export const SET_LOADING="SET_LOADING";
+export const GET_MOVIES="GET_MOVIES";
+export const GET_MOVIE="GET_MOVIE";
+export const GET_TRAILER="GET_TRAILER";
+export const GET_PERSON="GET_PERSON";
+export const GET_SEARCHED_MOVIES="GET_SEARCHED_MOVIES";

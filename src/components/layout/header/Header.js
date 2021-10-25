@@ -1,10 +1,13 @@
 import "./Header.css";
 import logo from "../../../images/logo2.png";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Nav } from "./Nav";
+import movieContext from './../../../context/movieContext/movieContext';
 
-const Header = ({ searchHandler }) => {
+
+const Header = () => {
+const {searchHandler}=useContext(movieContext)
   const submitHandler=(e)=>{
     if (searchtitle) {
       searchHandler(searchtitle);

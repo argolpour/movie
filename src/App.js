@@ -1,7 +1,5 @@
-import { createContext, useState ,useEffect} from "react";
 import "./App.css";
 import Header from "./components/layout/header/Header";
-
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/pages/home/Home";
 import About from "./components/pages/about/About";
@@ -14,49 +12,21 @@ import Top250 from './components/pages/top250/Top250';
 import top250data from './top250data.json'
 import top250series from './top250seriesdata.json'
 import Top250series from './components/pages/top250series/Top250series'
+import MovieState from './context/movieContext/MovieState';
 
-
-
-
-export const Context = createContext();
 
 function App() {
-   const [movies, setMovies] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [searchmovies, setSearchmovies] = useState([]);
-  
- 
-  useEffect(() => {
-      setLoading(true);
-      fetch(`https://imdb-api.com/en/API/ComingSoon/k_13evw331`)
-      .then(response => response.json())
-      .then(json => setMovies(json))
-  }, [])
-
-
-  const searchHandler=async (username)=>{
-    setLoading(false)
-   await fetch (`https://imdb-api.com/en/API/SearchTitle/k_13evw331/${username}`).then(respond=>respond.json()).then(data=>{
-       setSearchmovies(data.results);
-     
-   }).catch((err)=>{
-       // setError("there is no data");
-       console.log(err);
-   }).finally(()=>{
-      setLoading(false)
-   })
- }
-
+   
   return (
     <>
       <Router>
-        <Header searchHandler={searchHandler} />
+      <MovieState>
+        <Header />
         <Switch>
           <Route path="/" exact>
-            <Context.Provider value={movies}>
+           
            <Home />
-            </Context.Provider>
+          
           </Route>
           <Route path="/about" exact>
             <About />
@@ -65,8 +35,8 @@ function App() {
             <Contact />
           </Route>
          <Route path={`/search/:title`} exact>
-           {loading && <div class="spinner"></div>}
-         {searchmovies.length>=1 && <Searchresult searchmovies={searchmovies}/>}
+           {/* {loading && <div class="spinner"></div>} */}
+         <Searchresult />
          </Route>
          <Route path='/movie/:id' exact>
           <Movieinfo/>
@@ -84,6 +54,7 @@ function App() {
             <Notfound />
           </Route>
         </Switch>
+        </MovieState>
       </Router>
     </>
   );

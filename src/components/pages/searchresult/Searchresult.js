@@ -1,9 +1,9 @@
 import Searchmovies from "./Searchmovies"
 
-const Searchresult = ({searchmovies}) => {
+const Searchresult = () => {
     return (
         <div className="movies-wrapper">
-        <Searchmovies searchmovies={searchmovies} />
+        <Searchmovies />
                    
     </div>
     )

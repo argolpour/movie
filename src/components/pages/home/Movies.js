@@ -1,13 +1,12 @@
-import { useContext } from "react";
-import { Context } from "./../../../App";
+import { useContext} from "react";
 import Movie from "./Movie";
-
+import movieContext from './../../../context/movieContext/movieContext';
 const Movies = () => {
-  const movies = useContext(Context);
-  
+  const {movies} = useContext(movieContext);
+ 
    return (
     <div className="movies-box">
-     { movies?.items.map((movie) => (
+     { movies?.map((movie) => (
         <Movie movie={movie} key={movie.id} />
       ))}
     </div>

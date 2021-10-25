@@ -1,21 +1,18 @@
 
-import { useEffect ,useState} from 'react';
+import { useEffect ,useContext} from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import './Person.css'
+import './Person.css';
+import movieContext from './../../../context/movieContext/movieContext';
+
 const Person = () => {
 
 const {id}=useParams();
-const [person, setPerson] = useState([])
-
-const fetchPersonData=async ()=>{
-   await fetch(` https://imdb-api.com/en/API/Name/k_13evw331/${id}`)
-    .then(response => response.json())
-    .then(json => setPerson(json))
-}
-
+const {fetchPersonData,person}=useContext(movieContext);
 useEffect(()=>{
-    fetchPersonData();
+    fetchPersonData(id);
+    // eslint-disable-next-line
+    // eslint-disable-next-line react-hooks/exhaustive-deps
    
 },[id])
 const personRole=person?.role?.split(",");
